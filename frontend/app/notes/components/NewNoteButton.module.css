@@ -1,0 +1,26 @@
+.newNoteBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 1.6px solid #957139;
+  background: transparent;
+  color: #957139;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.newNoteBtn:hover {
+  background: #957139;
+  color: #FAF1E3;
+}
+
+.plusIcon {
+  font-size: 20px;
+  line-height: 0;
+}

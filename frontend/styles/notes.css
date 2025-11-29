@@ -1,0 +1,25 @@
+.notes-image {
+  height: 400px;
+  width: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.filter-title {
+  /* width: 360px; */
+  padding: 1px;
+  background: transparent;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  color: black;
+}
+
+.filter-option {
+  /* width: 360px; */
+  padding: 1px;
+  /* border: 1px solid var(--input-border); */
+  background: transparent;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
