@@ -2,19 +2,7 @@
 
 import { useState } from "react";
 import styles from "./CategoryDropdown.module.css";
-
-interface Category {
-  id: string;
-  name: string;
-  color: string;
-}
-
-const CATEGORIES: Category[] = [
-  { id: "random", name: "Random Thoughts", color: "#d89b7a" },
-  { id: "personal", name: "Personal", color: "#7eb3b0" },
-  { id: "school", name: "School", color: "#f0d89c" },
-  { id: "drama", name: "Drama", color: "#a8c89c" },
-];
+import { CATEGORIES, Category } from "../lib/categories";
 
 interface CategoryDropdownProps {
   onCategorySelect?: (category: Category) => void;
@@ -83,4 +71,3 @@ export default function CategoryDropdown({
   );
 }
 
-export { CATEGORIES };

@@ -29,7 +29,7 @@ export default function NotesPage() {
   return (
     <div className="flex h-screen bg-[#FAF1E3]">
       {/* LEFT SIDEBAR */}
-      <CategoriesSidebar />
+      <CategoriesSidebar notes={notes} />
 
       {/* MAIN CONTENT */}
       <div className="flex flex-1 flex-col bg-[#FAF1E3]">
@@ -39,14 +39,14 @@ export default function NotesPage() {
         </div>
 
         {/* NOTES OR EMPTY STATE */}
-          {notes.length === 0 ? (
-            <EmptyState />
-          ) : (
-            <div className="flex-1 flex overflow-y-auto p-6 m-6">
+        {notes.length === 0 ? (
+          <EmptyState />
+        ) : (
+          <div className="flex-1 flex overflow-y-auto p-6 m-6">
             <NotesList notes={notes} />
-            </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
+    </div>
   );
 }

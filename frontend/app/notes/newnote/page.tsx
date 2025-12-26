@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import NoteDetail from "../components/NoteDetail";
 import CategoryDropdown from "../components/CategoryDropdown";
-import { CATEGORIES } from "../components/CategoryDropdown";
+import { CATEGORIES } from "../lib/categories";
 import { saveNote } from "../lib/notesService";
 import styles from "./newnote.module.css";
 
@@ -21,12 +21,12 @@ export default function NewNotePage() {
 
   const handleAutoSave = (data: { title: string; content: string; category: string }) => {
     setNoteData(data);
-    
+
     // Don't save empty notes
     if (!data.title.trim() && !data.content.trim()) {
       return;
     }
-    
+
     // Save to localStorage with the same note ID
     if (noteId) {
       saveNote({
