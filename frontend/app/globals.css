@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 /* GLOBAL COLORS */
 :root {
   --bg: #FAF1E3;
@@ -11,11 +9,6 @@
 }
 
 /* RESET + BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   background-color: var(--bg);

@@ -11,6 +11,7 @@ export default function LoginPage() {
 
   const handleLogin = () => {
     // No auth yet — just redirect
+    localStorage.removeItem('notes_app_notes');
     router.push("/notes");
   };
   
