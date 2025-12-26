@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import NoteDetail from "../components/NoteDetail";
 import CategoryDropdown from "../components/CategoryDropdown";
 import { CATEGORIES } from "../lib/categories";
-import { saveNote } from "../lib/notesService";
+import { saveNote, generateNextId } from "../lib/notesService";
 import styles from "./newnote.module.css";
 
 export default function NewNotePage() {
@@ -16,7 +16,7 @@ export default function NewNotePage() {
 
   // Generate note ID once on component mount
   useEffect(() => {
-    setNoteId(`note_${Date.now()}`);
+    setNoteId(generateNextId());
   }, []);
 
   const handleAutoSave = (data: { title: string; content: string; category: string }) => {

@@ -16,6 +16,20 @@ export function getNotes(): Note[] {
   return stored ? JSON.parse(stored) : [];
 }
 
+export function generateNextId(): string {
+  const notes = getNotes();
+  const ids = notes
+    .map((n) => parseInt(n.id))
+    .filter((n) => !isNaN(n));
+
+  if (ids.length === 0) {
+    return "1";
+  }
+
+  const maxId = Math.max(...ids);
+  return (maxId + 1).toString();
+}
+
 export function saveNote(note: Note): void {
   if (typeof window === "undefined") return;
   const notes = getNotes();
